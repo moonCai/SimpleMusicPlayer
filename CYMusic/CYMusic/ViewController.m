@@ -11,6 +11,7 @@
 #import "CYMusicModel.h"
 #import "YYModel.h"
 #import "CYMusicManager.h"
+#import "CYLyricParser.h"
 
 @interface ViewController ()
 //模型数据数组
@@ -85,6 +86,7 @@
     //横屏歌手图片
     self.singerHoriImgView.image = [UIImage imageNamed:self.modelArray[self.currentIndex].image];
     //歌词
+    [CYLyricParser parserLyricWithFileName:self.modelArray[self.currentIndex].lrc];
     
     //专辑
     self.albumLabel.text = self.modelArray[self.currentIndex].album;

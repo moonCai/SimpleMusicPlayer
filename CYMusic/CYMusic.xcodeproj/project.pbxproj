@@ -38,6 +38,9 @@
 		6FC264411EE1CAA9009E35DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264401EE1CAA9009E35DB /* Assets.xcassets */; };
 		6FC264441EE1CAA9009E35DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264421EE1CAA9009E35DB /* LaunchScreen.storyboard */; };
 		6FC2645A1EE1CDCA009E35DB /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264591EE1CDCA009E35DB /* Contents.json */; };
+		6FD663741F3F3989001C052A /* CYLyricModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD663731F3F3989001C052A /* CYLyricModel.m */; };
+		6FD663771F3F3A31001C052A /* CYLyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD663761F3F3A31001C052A /* CYLyricParser.m */; };
+		6FD6637A1F3F6491001C052A /* NSDateFormatter+shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD663791F3F6491001C052A /* NSDateFormatter+shared.m */; };
 		8F65352E35D310D92FA73BB4 /* libPods-CYMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FB72F3AE60FBD59E9A7E7 /* libPods-CYMusic.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,12 @@
 		6FC264431EE1CAA9009E35DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FC264451EE1CAA9009E35DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FC264591EE1CDCA009E35DB /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		6FD663721F3F3989001C052A /* CYLyricModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLyricModel.h; sourceTree = "<group>"; };
+		6FD663731F3F3989001C052A /* CYLyricModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLyricModel.m; sourceTree = "<group>"; };
+		6FD663751F3F3A31001C052A /* CYLyricParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLyricParser.h; sourceTree = "<group>"; };
+		6FD663761F3F3A31001C052A /* CYLyricParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLyricParser.m; sourceTree = "<group>"; };
+		6FD663781F3F6491001C052A /* NSDateFormatter+shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+shared.h"; sourceTree = "<group>"; };
+		6FD663791F3F6491001C052A /* NSDateFormatter+shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+shared.m"; sourceTree = "<group>"; };
 		CA7E9FC93C2A9A11D755C635 /* Pods-CYMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		D9C26FF0C3854A58FC80F09F /* Pods-CYMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +173,10 @@
 			children = (
 				6F69DCC41EE55229000D2394 /* CYMusicModel.h */,
 				6F69DCC51EE55229000D2394 /* CYMusicModel.m */,
+				6FD663721F3F3989001C052A /* CYLyricModel.h */,
+				6FD663731F3F3989001C052A /* CYLyricModel.m */,
+				6FD663751F3F3A31001C052A /* CYLyricParser.h */,
+				6FD663761F3F3A31001C052A /* CYLyricParser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +230,8 @@
 			children = (
 				6F45186D1EE732A1002F678D /* CYMusicManager.h */,
 				6F45186E1EE732A1002F678D /* CYMusicManager.m */,
+				6FD663781F3F6491001C052A /* NSDateFormatter+shared.h */,
+				6FD663791F3F6491001C052A /* NSDateFormatter+shared.m */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -384,9 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD6637A1F3F6491001C052A /* NSDateFormatter+shared.m in Sources */,
 				6F45186F1EE732A1002F678D /* CYMusicManager.m in Sources */,
 				6FA331FA1EE54A6600BDA276 /* AppDelegate.m in Sources */,
+				6FD663771F3F3A31001C052A /* CYLyricParser.m in Sources */,
 				6FC264361EE1CAA9009E35DB /* main.m in Sources */,
+				6FD663741F3F3989001C052A /* CYLyricModel.m in Sources */,
 				6FA331FB1EE54A6600BDA276 /* ViewController.m in Sources */,
 				6F69DCC61EE55229000D2394 /* CYMusicModel.m in Sources */,
 			);
