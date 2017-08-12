@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F45186F1EE732A1002F678D /* CYMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F45186E1EE732A1002F678D /* CYMusicManager.m */; };
+		6F69DCC61EE55229000D2394 /* CYMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F69DCC51EE55229000D2394 /* CYMusicModel.m */; };
+		6FA331E11EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331CC1EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 */; };
+		6FA331E21EE52ED400BDA276 /* 李克勤.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331CD1EE52ED400BDA276 /* 李克勤.jpg */; };
+		6FA331E31EE52ED400BDA276 /* 泡沫.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331CE1EE52ED400BDA276 /* 泡沫.lrc */; };
+		6FA331E41EE52ED400BDA276 /* 稳稳的幸福.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331CF1EE52ED400BDA276 /* 稳稳的幸福.lrc */; };
+		6FA331E51EE52ED400BDA276 /* 小苹果.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D01EE52ED400BDA276 /* 小苹果.lrc */; };
+		6FA331E61EE52ED400BDA276 /* 小苹果.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D11EE52ED400BDA276 /* 小苹果.mp3 */; };
+		6FA331E71EE52ED400BDA276 /* 月半小夜曲.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D21EE52ED400BDA276 /* 月半小夜曲.lrc */; };
+		6FA331E81EE52ED400BDA276 /* 张译 - 稳稳的幸福.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D31EE52ED400BDA276 /* 张译 - 稳稳的幸福.mp3 */; };
+		6FA331E91EE52ED400BDA276 /* buyao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D41EE52ED400BDA276 /* buyao.wav */; };
+		6FA331EA1EE52ED400BDA276 /* chatcome.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D51EE52ED400BDA276 /* chatcome.wav */; };
+		6FA331EB1EE52ED400BDA276 /* G.E.M. 邓紫棋 - 泡沫.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D61EE52ED400BDA276 /* G.E.M. 邓紫棋 - 泡沫.mp3 */; };
+		6FA331EC1EE52ED400BDA276 /* I'm yours.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D71EE52ED400BDA276 /* I'm yours.lrc */; };
+		6FA331ED1EE52ED400BDA276 /* Jason Mraz - I'm Yours.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D81EE52ED400BDA276 /* Jason Mraz - I'm Yours.mp3 */; };
+		6FA331EE1EE52ED400BDA276 /* jason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331D91EE52ED400BDA276 /* jason.jpg */; };
+		6FA331EF1EE52ED400BDA276 /* lamazhengzhuan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DA1EE52ED400BDA276 /* lamazhengzhuan.jpg */; };
+		6FA331F01EE52ED400BDA276 /* Owl City - The Saltwater Room.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DB1EE52ED400BDA276 /* Owl City - The Saltwater Room.mp3 */; };
+		6FA331F11EE52ED400BDA276 /* paomo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DC1EE52ED400BDA276 /* paomo.jpg */; };
+		6FA331F21EE52ED400BDA276 /* st.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DD1EE52ED400BDA276 /* st.jpg */; };
+		6FA331F31EE52ED400BDA276 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DE1EE52ED400BDA276 /* test.wav */; };
+		6FA331F41EE52ED400BDA276 /* The salt water room.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331DF1EE52ED400BDA276 /* The salt water room.lrc */; };
+		6FA331F51EE52ED400BDA276 /* xpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331E01EE52ED400BDA276 /* xpg.jpg */; };
+		6FA331FA1EE54A6600BDA276 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA331F71EE54A6600BDA276 /* AppDelegate.m */; };
+		6FA331FB1EE54A6600BDA276 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA331F91EE54A6600BDA276 /* ViewController.m */; };
+		6FA332201EE54BC600BDA276 /* mlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FA3321F1EE54BC600BDA276 /* mlist.plist */; };
+		6FC264361EE1CAA9009E35DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC264351EE1CAA9009E35DB /* main.m */; };
+		6FC2643F1EE1CAA9009E35DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC2643D1EE1CAA9009E35DB /* Main.storyboard */; };
+		6FC264411EE1CAA9009E35DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264401EE1CAA9009E35DB /* Assets.xcassets */; };
+		6FC264441EE1CAA9009E35DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264421EE1CAA9009E35DB /* LaunchScreen.storyboard */; };
+		6FC2645A1EE1CDCA009E35DB /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FC264591EE1CDCA009E35DB /* Contents.json */; };
+		8F65352E35D310D92FA73BB4 /* libPods-CYMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FB72F3AE60FBD59E9A7E7 /* libPods-CYMusic.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		488FB72F3AE60FBD59E9A7E7 /* libPods-CYMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F45186D1EE732A1002F678D /* CYMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMusicManager.h; sourceTree = "<group>"; };
+		6F45186E1EE732A1002F678D /* CYMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMusicManager.m; sourceTree = "<group>"; };
+		6F69DCC41EE55229000D2394 /* CYMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMusicModel.h; sourceTree = "<group>"; };
+		6F69DCC51EE55229000D2394 /* CYMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMusicModel.m; sourceTree = "<group>"; };
+		6FA331CC1EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "李克勤 - 月半小夜曲.mp3"; sourceTree = "<group>"; };
+		6FA331CD1EE52ED400BDA276 /* 李克勤.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "李克勤.jpg"; sourceTree = "<group>"; };
+		6FA331CE1EE52ED400BDA276 /* 泡沫.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "泡沫.lrc"; sourceTree = "<group>"; };
+		6FA331CF1EE52ED400BDA276 /* 稳稳的幸福.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "稳稳的幸福.lrc"; sourceTree = "<group>"; };
+		6FA331D01EE52ED400BDA276 /* 小苹果.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "小苹果.lrc"; sourceTree = "<group>"; };
+		6FA331D11EE52ED400BDA276 /* 小苹果.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "小苹果.mp3"; sourceTree = "<group>"; };
+		6FA331D21EE52ED400BDA276 /* 月半小夜曲.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "月半小夜曲.lrc"; sourceTree = "<group>"; };
+		6FA331D31EE52ED400BDA276 /* 张译 - 稳稳的幸福.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "张译 - 稳稳的幸福.mp3"; sourceTree = "<group>"; };
+		6FA331D41EE52ED400BDA276 /* buyao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buyao.wav; sourceTree = "<group>"; };
+		6FA331D51EE52ED400BDA276 /* chatcome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chatcome.wav; sourceTree = "<group>"; };
+		6FA331D61EE52ED400BDA276 /* G.E.M. 邓紫棋 - 泡沫.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "G.E.M. 邓紫棋 - 泡沫.mp3"; sourceTree = "<group>"; };
+		6FA331D71EE52ED400BDA276 /* I'm yours.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "I'm yours.lrc"; sourceTree = "<group>"; };
+		6FA331D81EE52ED400BDA276 /* Jason Mraz - I'm Yours.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Jason Mraz - I'm Yours.mp3"; sourceTree = "<group>"; };
+		6FA331D91EE52ED400BDA276 /* jason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jason.jpg; sourceTree = "<group>"; };
+		6FA331DA1EE52ED400BDA276 /* lamazhengzhuan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lamazhengzhuan.jpg; sourceTree = "<group>"; };
+		6FA331DB1EE52ED400BDA276 /* Owl City - The Saltwater Room.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Owl City - The Saltwater Room.mp3"; sourceTree = "<group>"; };
+		6FA331DC1EE52ED400BDA276 /* paomo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paomo.jpg; sourceTree = "<group>"; };
+		6FA331DD1EE52ED400BDA276 /* st.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = st.jpg; sourceTree = "<group>"; };
+		6FA331DE1EE52ED400BDA276 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
+		6FA331DF1EE52ED400BDA276 /* The salt water room.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The salt water room.lrc"; sourceTree = "<group>"; };
+		6FA331E01EE52ED400BDA276 /* xpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xpg.jpg; sourceTree = "<group>"; };
+		6FA331F61EE54A6600BDA276 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6FA331F71EE54A6600BDA276 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6FA331F81EE54A6600BDA276 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6FA331F91EE54A6600BDA276 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6FA3321F1EE54BC600BDA276 /* mlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mlist.plist; sourceTree = "<group>"; };
+		6FC264311EE1CAA9009E35DB /* CYMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC264351EE1CAA9009E35DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6FC2643E1EE1CAA9009E35DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FC264401EE1CAA9009E35DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FC264431EE1CAA9009E35DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FC264451EE1CAA9009E35DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FC264591EE1CDCA009E35DB /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		CA7E9FC93C2A9A11D755C635 /* Pods-CYMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		D9C26FF0C3854A58FC80F09F /* Pods-CYMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FC2642E1EE1CAA9009E35DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F65352E35D310D92FA73BB4 /* libPods-CYMusic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FC264281EE1CAA9009E35DB = {
+			isa = PBXGroup;
+			children = (
+				6FC264331EE1CAA9009E35DB /* CYMusic */,
+				6FC264321EE1CAA9009E35DB /* Products */,
+				EE838C4F1CA4370DCC634924 /* Pods */,
+				75DE0F0AB8275F6B05ED3F3C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6FC264321EE1CAA9009E35DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FC264311EE1CAA9009E35DB /* CYMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FC264331EE1CAA9009E35DB /* CYMusic */ = {
+			isa = PBXGroup;
+			children = (
+				6FA331F61EE54A6600BDA276 /* AppDelegate.h */,
+				6FA331F71EE54A6600BDA276 /* AppDelegate.m */,
+				6FA331F81EE54A6600BDA276 /* ViewController.h */,
+				6FA331F91EE54A6600BDA276 /* ViewController.m */,
+				6FC264571EE1CDC0009E35DB /* Common */,
+				6FC264581EE1CDC0009E35DB /* Libs */,
+				6FC2644B1EE1CB18009E35DB /* KeyClasses */,
+				6FC2643D1EE1CAA9009E35DB /* Main.storyboard */,
+				6FC264401EE1CAA9009E35DB /* Assets.xcassets */,
+				6FC264421EE1CAA9009E35DB /* LaunchScreen.storyboard */,
+				6FC264451EE1CAA9009E35DB /* Info.plist */,
+				6FC264341EE1CAA9009E35DB /* Supporting Files */,
+			);
+			path = CYMusic;
+			sourceTree = "<group>";
+		};
+		6FC264341EE1CAA9009E35DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FC264351EE1CAA9009E35DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FC2644B1EE1CB18009E35DB /* KeyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6FC2644C1EE1CB18009E35DB /* Controllers */,
+				6FC2644D1EE1CB18009E35DB /* Models */,
+				6FC2644E1EE1CB18009E35DB /* Other */,
+				6FC2644F1EE1CB18009E35DB /* Views */,
+			);
+			path = KeyClasses;
+			sourceTree = "<group>";
+		};
+		6FC2644C1EE1CB18009E35DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6FC2644D1EE1CB18009E35DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F69DCC41EE55229000D2394 /* CYMusicModel.h */,
+				6F69DCC51EE55229000D2394 /* CYMusicModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6FC2644E1EE1CB18009E35DB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		6FC2644F1EE1CB18009E35DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6FC264571EE1CDC0009E35DB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6FA3321F1EE54BC600BDA276 /* mlist.plist */,
+				6FA331CC1EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 */,
+				6FA331CD1EE52ED400BDA276 /* 李克勤.jpg */,
+				6FA331CE1EE52ED400BDA276 /* 泡沫.lrc */,
+				6FA331CF1EE52ED400BDA276 /* 稳稳的幸福.lrc */,
+				6FA331D01EE52ED400BDA276 /* 小苹果.lrc */,
+				6FA331D11EE52ED400BDA276 /* 小苹果.mp3 */,
+				6FA331D21EE52ED400BDA276 /* 月半小夜曲.lrc */,
+				6FA331D31EE52ED400BDA276 /* 张译 - 稳稳的幸福.mp3 */,
+				6FA331D41EE52ED400BDA276 /* buyao.wav */,
+				6FA331D51EE52ED400BDA276 /* chatcome.wav */,
+				6FA331D61EE52ED400BDA276 /* G.E.M. 邓紫棋 - 泡沫.mp3 */,
+				6FA331D71EE52ED400BDA276 /* I'm yours.lrc */,
+				6FA331D81EE52ED400BDA276 /* Jason Mraz - I'm Yours.mp3 */,
+				6FA331D91EE52ED400BDA276 /* jason.jpg */,
+				6FA331DA1EE52ED400BDA276 /* lamazhengzhuan.jpg */,
+				6FA331DB1EE52ED400BDA276 /* Owl City - The Saltwater Room.mp3 */,
+				6FA331DC1EE52ED400BDA276 /* paomo.jpg */,
+				6FA331DD1EE52ED400BDA276 /* st.jpg */,
+				6FA331DE1EE52ED400BDA276 /* test.wav */,
+				6FA331DF1EE52ED400BDA276 /* The salt water room.lrc */,
+				6FA331E01EE52ED400BDA276 /* xpg.jpg */,
+				6FC264591EE1CDCA009E35DB /* Contents.json */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6FC264581EE1CDC0009E35DB /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				6F45186D1EE732A1002F678D /* CYMusicManager.h */,
+				6F45186E1EE732A1002F678D /* CYMusicManager.m */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		75DE0F0AB8275F6B05ED3F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				488FB72F3AE60FBD59E9A7E7 /* libPods-CYMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE838C4F1CA4370DCC634924 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA7E9FC93C2A9A11D755C635 /* Pods-CYMusic.debug.xcconfig */,
+				D9C26FF0C3854A58FC80F09F /* Pods-CYMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FC264301EE1CAA9009E35DB /* CYMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FC264481EE1CAA9009E35DB /* Build configuration list for PBXNativeTarget "CYMusic" */;
+			buildPhases = (
+				07098A72A6430C25F9AAD45D /* [CP] Check Pods Manifest.lock */,
+				6FC2642D1EE1CAA9009E35DB /* Sources */,
+				6FC2642E1EE1CAA9009E35DB /* Frameworks */,
+				6FC2642F1EE1CAA9009E35DB /* Resources */,
+				F12E0568316E9916BB91EA29 /* [CP] Embed Pods Frameworks */,
+				239FC26B78048AAFC2BC6AB2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CYMusic;
+			productName = CYMusic;
+			productReference = 6FC264311EE1CAA9009E35DB /* CYMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FC264291EE1CAA9009E35DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "蔡钰";
+				TargetAttributes = {
+					6FC264301EE1CAA9009E35DB = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PW4YTWF933;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6FC2642C1EE1CAA9009E35DB /* Build configuration list for PBXProject "CYMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FC264281EE1CAA9009E35DB;
+			productRefGroup = 6FC264321EE1CAA9009E35DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FC264301EE1CAA9009E35DB /* CYMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FC2642F1EE1CAA9009E35DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FA332201EE54BC600BDA276 /* mlist.plist in Resources */,
+				6FC264441EE1CAA9009E35DB /* LaunchScreen.storyboard in Resources */,
+				6FA331E41EE52ED400BDA276 /* 稳稳的幸福.lrc in Resources */,
+				6FA331ED1EE52ED400BDA276 /* Jason Mraz - I'm Yours.mp3 in Resources */,
+				6FA331F41EE52ED400BDA276 /* The salt water room.lrc in Resources */,
+				6FA331E71EE52ED400BDA276 /* 月半小夜曲.lrc in Resources */,
+				6FA331F31EE52ED400BDA276 /* test.wav in Resources */,
+				6FC264411EE1CAA9009E35DB /* Assets.xcassets in Resources */,
+				6FA331EA1EE52ED400BDA276 /* chatcome.wav in Resources */,
+				6FA331E51EE52ED400BDA276 /* 小苹果.lrc in Resources */,
+				6FA331E11EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 in Resources */,
+				6FA331F21EE52ED400BDA276 /* st.jpg in Resources */,
+				6FA331E61EE52ED400BDA276 /* 小苹果.mp3 in Resources */,
+				6FA331E21EE52ED400BDA276 /* 李克勤.jpg in Resources */,
+				6FA331EB1EE52ED400BDA276 /* G.E.M. 邓紫棋 - 泡沫.mp3 in Resources */,
+				6FA331E31EE52ED400BDA276 /* 泡沫.lrc in Resources */,
+				6FA331F01EE52ED400BDA276 /* Owl City - The Saltwater Room.mp3 in Resources */,
+				6FA331EC1EE52ED400BDA276 /* I'm yours.lrc in Resources */,
+				6FA331F11EE52ED400BDA276 /* paomo.jpg in Resources */,
+				6FA331E91EE52ED400BDA276 /* buyao.wav in Resources */,
+				6FA331EF1EE52ED400BDA276 /* lamazhengzhuan.jpg in Resources */,
+				6FC2643F1EE1CAA9009E35DB /* Main.storyboard in Resources */,
+				6FA331EE1EE52ED400BDA276 /* jason.jpg in Resources */,
+				6FC2645A1EE1CDCA009E35DB /* Contents.json in Resources */,
+				6FA331E81EE52ED400BDA276 /* 张译 - 稳稳的幸福.mp3 in Resources */,
+				6FA331F51EE52ED400BDA276 /* xpg.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07098A72A6430C25F9AAD45D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		239FC26B78048AAFC2BC6AB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F12E0568316E9916BB91EA29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CYMusic/Pods-CYMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FC2642D1EE1CAA9009E35DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F45186F1EE732A1002F678D /* CYMusicManager.m in Sources */,
+				6FA331FA1EE54A6600BDA276 /* AppDelegate.m in Sources */,
+				6FC264361EE1CAA9009E35DB /* main.m in Sources */,
+				6FA331FB1EE54A6600BDA276 /* ViewController.m in Sources */,
+				6F69DCC61EE55229000D2394 /* CYMusicModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6FC2643D1EE1CAA9009E35DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC2643E1EE1CAA9009E35DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FC264421EE1CAA9009E35DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FC264431EE1CAA9009E35DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FC264461EE1CAA9009E35DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FC264471EE1CAA9009E35DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FC264491EE1CAA9009E35DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7E9FC93C2A9A11D755C635 /* Pods-CYMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = PW4YTWF933;
+				INFOPLIST_FILE = CYMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hh.CYMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6FC2644A1EE1CAA9009E35DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9C26FF0C3854A58FC80F09F /* Pods-CYMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = PW4YTWF933;
+				INFOPLIST_FILE = CYMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hh.CYMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FC2642C1EE1CAA9009E35DB /* Build configuration list for PBXProject "CYMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC264461EE1CAA9009E35DB /* Debug */,
+				6FC264471EE1CAA9009E35DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FC264481EE1CAA9009E35DB /* Build configuration list for PBXNativeTarget "CYMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FC264491EE1CAA9009E35DB /* Debug */,
+				6FC2644A1EE1CAA9009E35DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FC264291EE1CAA9009E35DB /* Project object */;
+}
