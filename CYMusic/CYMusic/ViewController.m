@@ -12,6 +12,7 @@
 #import "YYModel.h"
 #import "CYMusicManager.h"
 #import "CYLyricParser.h"
+#import "CYLyricModel.h"
 
 @interface ViewController ()
 //模型数据数组
@@ -20,6 +21,10 @@
 @property (nonatomic,assign) NSInteger currentIndex;
 //定时器
 @property (nonatomic,strong) CADisplayLink *linkTimer;
+//当前播放歌曲歌词数组
+@property (nonatomic,strong) NSArray <CYLyricModel *>  *lyricModelArr;
+//当前播放歌词索引
+@property (nonatomic,assign) NSInteger currentLyricIndex;
 
 #pragma mark 公共视图
 //背景视图
@@ -86,14 +91,11 @@
     //横屏歌手图片
     self.singerHoriImgView.image = [UIImage imageNamed:self.modelArray[self.currentIndex].image];
     //歌词
-    [CYLyricParser parserLyricWithFileName:self.modelArray[self.currentIndex].lrc];
+    self.lyricModelArr = [CYLyricParser parserLyricWithFileName:self.modelArray[self.currentIndex].lrc];
     
     //专辑
     self.albumLabel.text = self.modelArray[self.currentIndex].album;
-    /*
-     //歌词
-     @property (nonatomic,copy) NSString *lrc;
-     */
+
     //默认点击播放按钮
     [self playAction:self.playButton];
     
@@ -127,6 +129,36 @@
         [self nextAction:self.nextButton];
     }
     
+    //更新歌词
+    [self updateLyric];
+}
+
+- (void)updateLyric {
+    //当前歌词模型
+    CYLyricModel *currentLyricModel = self.lyricModelArr[self.currentLyricIndex];
+    //下一句歌词模型
+    CYLyricModel *nextLyricModel;
+    if (self.currentLyricIndex == self.lyricModelArr.count - 1) { //当前歌词即是本曲的最后一句歌词
+        nextLyricModel = [[CYLyricModel alloc] init];
+        nextLyricModel.initialTime = [CYMusicManager sharedManager].duration;
+        nextLyricModel.lyricContent = currentLyricModel.lyricContent;
+    } else {
+        nextLyricModel = self.lyricModelArr[self.currentLyricIndex + 1];
+    }
+    //往前调整播放进度时
+    if ([CYMusicManager sharedManager].currentTime > nextLyricModel.initialTime && self.currentLyricIndex < self.lyricModelArr.count - 1) {
+        self.currentLyricIndex++;
+        [self updateLyric];
+        return;
+    }
+    //往后调整播放进度时
+    if ([CYMusicManager sharedManager].currentTime < currentLyricModel.initialTime && self.currentLyricIndex > 0) {
+        self.currentLyricIndex--;
+        [self updateLyric];
+        return;
+    }
+    self.lyricsLabel.text = self.lyricModelArr[self.currentLyricIndex].lyricContent;
+    self.lyricsHorLabel.text = self.lyricModelArr[self.currentLyricIndex].lyricContent;
 }
 
 #pragma mark 滑动播放进度条,实现手动改变进度
@@ -150,6 +182,8 @@
     }
     
     self.playButton.selected = NO;
+    //清零当前播放歌词索引
+    self.currentLyricIndex = 0;
     
     [self setUpData];
     
@@ -186,7 +220,8 @@
     }
     
     self.playButton.selected = NO;
-    
+    //清零当前播放歌词索引
+    self.currentLyricIndex = 0;
     [self setUpData];
     
 }

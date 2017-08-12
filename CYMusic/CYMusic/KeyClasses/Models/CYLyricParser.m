@@ -50,7 +50,7 @@
 //        NSLog(@"%f:%@",lyricModel.initialTime,lyricModel.lyricContent);
 //    }
     
-    return nil;
+    return lyricSortedArr;
 }
 
 #pragma mark ---- 将时间字符串转换成时间间隔
