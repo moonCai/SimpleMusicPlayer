@@ -64,7 +64,7 @@ static CGFloat const labelHeight = 40.0;
     _currentIndex = currentIndex;
     //放大当前播放句的字体
     UIColorLabel *currentLabel = _labelArrM[_currentIndex];
-    currentLabel.font = [UIFont systemFontOfSize:25];
+    currentLabel.font = [UIFont systemFontOfSize:22];
     //改变偏移量
     self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin + currentIndex * labelHeight);
 
