@@ -174,7 +174,8 @@
     CGFloat progress = ([CYMusicManager sharedManager].currentTime - currentLyricModel.initialTime) / (nextLyricModel.initialTime - currentLyricModel.initialTime);
     self.lyricsLabel.progress = progress;
     self.lyricsHorLabel.progress = progress;
-
+    //传递当前播放歌曲索引
+    self.lyricView.currentIndex = _currentLyricIndex;
 }
 
 #pragma mark 滑动播放进度条,实现手动改变进度
@@ -200,7 +201,7 @@
     self.playButton.selected = NO;
     //清零当前播放歌词索引
     self.currentLyricIndex = 0;
-    
+
     [self setUpData];
     
 }
@@ -238,6 +239,7 @@
     self.playButton.selected = NO;
     //清零当前播放歌词索引
     self.currentLyricIndex = 0;
+    
     [self setUpData];
     
 }
@@ -268,6 +270,11 @@
     
 }
 
+-(void)setCurrentLyricIndex:(NSInteger)currentLyricIndex {
+    _currentLyricIndex = currentLyricIndex;
+    //传递当前播放歌曲索引
+    self.lyricView.currentIndex = _currentLyricIndex;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

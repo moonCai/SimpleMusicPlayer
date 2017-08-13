@@ -20,7 +20,9 @@
 @interface UILyricView : UIView
 
 @property (nonatomic,weak) id<UILyricViewDelegate> delegate;
-
+//当前播放歌曲歌词数据源
 @property (nonatomic,strong) NSArray <CYLyricModel *> *lyricModels;
+//当前播放歌词索引
+@property (nonatomic,assign) NSInteger currentIndex;
 
 @end

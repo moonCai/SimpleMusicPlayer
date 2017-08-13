@@ -9,13 +9,16 @@
 #import "UILyricView.h"
 #import <Masonry.h>
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kTopMargin self.center.y - labelHeight * 0.5
 
 static CGFloat const labelHeight = 40.0;
 @interface UILyricView () <UIScrollViewDelegate>
-
+//竖向滚动scrollView
 @property (nonatomic,strong) UIScrollView *verScrollView;
-
+//横向滚动scrollView
 @property (nonatomic,strong) UIScrollView *horScrollview;
+//label数组
+@property (nonatomic,strong) NSMutableArray<UILabel *> *labelArrM;
 
 @end
 @implementation UILyricView
@@ -28,11 +31,17 @@ static CGFloat const labelHeight = 40.0;
 }
 
 -(void)setLyricModels:(NSArray<CYLyricModel *> *)lyricModels {
+    //切歌时清除上一首播放歌曲的歌词数据源
+    [self.verScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    [_labelArrM removeAllObjects];
+
     _lyricModels = lyricModels;
     for (int i = 0; i < lyricModels.count; i++) {
         //获取歌词模型
         CYLyricModel *lyricModel = _lyricModels[i];
         UILabel *lyricLabel = [[UILabel alloc] init];
+        [self.labelArrM addObject:lyricLabel];
         lyricLabel.textColor = [UIColor whiteColor];
         lyricLabel.text = lyricModel.lyricContent;
         [self.verScrollView addSubview:lyricLabel];
@@ -44,14 +53,27 @@ static CGFloat const labelHeight = 40.0;
     }
 }
 
+- (void)setCurrentIndex:(NSInteger)currentIndex {
+    //将上一个放大的label以正常字号显示
+    UILabel *lastLabel = _labelArrM[_currentIndex];
+    lastLabel.font = [UIFont systemFontOfSize:17];
+    
+    _currentIndex = currentIndex;
+    //放大当前播放句的字体
+    UILabel *currentLabel = _labelArrM[_currentIndex];
+    currentLabel.font = [UIFont systemFontOfSize:25];
+    //改变偏移量
+    self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin + currentIndex * labelHeight);
+
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    CGFloat topMargin = self.center.y - labelHeight * 0.5;
     //    设置默认偏移量
-     self.verScrollView.contentOffset = CGPointMake(0, -topMargin);
+     self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin);
     //设置内边距
-    self.verScrollView.contentInset = UIEdgeInsetsMake(topMargin, 0, topMargin, 0);
+    self.verScrollView.contentInset = UIEdgeInsetsMake(kTopMargin, 0, kTopMargin, 0);
     //设置contentSize
     self.verScrollView.contentSize = CGSizeMake(0,  self.lyricModels.count *labelHeight);
 }
@@ -92,11 +114,13 @@ static CGFloat const labelHeight = 40.0;
         }
     }
     
-//    //判断滚动的是否是竖向视图
-//    if (scrollView == self.verScrollView) {
-//        
-//    }
 }
 
+- (NSMutableArray<UILabel *> *)labelArrM {
+    if (_labelArrM == nil) {
+        _labelArrM = [[NSMutableArray alloc] init];
+    }
+    return _labelArrM;
+}
 
 @end
