@@ -176,6 +176,8 @@
     self.lyricsHorLabel.progress = progress;
     //传递当前播放歌曲索引
     self.lyricView.currentIndex = _currentLyricIndex;
+    //设置歌词视图的播放进度
+    self.lyricView.lyricProgress = progress;
 }
 
 #pragma mark 滑动播放进度条,实现手动改变进度

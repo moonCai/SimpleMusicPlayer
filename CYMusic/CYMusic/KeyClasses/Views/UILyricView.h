@@ -24,5 +24,7 @@
 @property (nonatomic,strong) NSArray <CYLyricModel *> *lyricModels;
 //当前播放歌词索引
 @property (nonatomic,assign) NSInteger currentIndex;
+//当前歌词播放进度
+@property (nonatomic,assign) CGFloat lyricProgress;
 
 @end

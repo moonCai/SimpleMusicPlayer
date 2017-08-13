@@ -8,6 +8,8 @@
 
 #import "UILyricView.h"
 #import <Masonry.h>
+#import "UIColorLabel.h"
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kTopMargin self.center.y - labelHeight * 0.5
 
@@ -18,7 +20,7 @@ static CGFloat const labelHeight = 40.0;
 //横向滚动scrollView
 @property (nonatomic,strong) UIScrollView *horScrollview;
 //label数组
-@property (nonatomic,strong) NSMutableArray<UILabel *> *labelArrM;
+@property (nonatomic,strong) NSMutableArray<UIColorLabel *> *labelArrM;
 
 @end
 @implementation UILyricView
@@ -40,7 +42,7 @@ static CGFloat const labelHeight = 40.0;
     for (int i = 0; i < lyricModels.count; i++) {
         //获取歌词模型
         CYLyricModel *lyricModel = _lyricModels[i];
-        UILabel *lyricLabel = [[UILabel alloc] init];
+        UIColorLabel *lyricLabel = [[UIColorLabel alloc] init];
         [self.labelArrM addObject:lyricLabel];
         lyricLabel.textColor = [UIColor whiteColor];
         lyricLabel.text = lyricModel.lyricContent;
@@ -54,17 +56,24 @@ static CGFloat const labelHeight = 40.0;
 }
 
 - (void)setCurrentIndex:(NSInteger)currentIndex {
-    //将上一个放大的label以正常字号显示
-    UILabel *lastLabel = _labelArrM[_currentIndex];
+    //将上一个放大的label以正常字号显示.不进行混合渲染.
+    UIColorLabel *lastLabel = _labelArrM[_currentIndex];
     lastLabel.font = [UIFont systemFontOfSize:17];
+    lastLabel.progress = 0;
     
     _currentIndex = currentIndex;
     //放大当前播放句的字体
-    UILabel *currentLabel = _labelArrM[_currentIndex];
+    UIColorLabel *currentLabel = _labelArrM[_currentIndex];
     currentLabel.font = [UIFont systemFontOfSize:25];
     //改变偏移量
     self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin + currentIndex * labelHeight);
 
+}
+
+- (void)setLyricProgress:(CGFloat)lyricProgress {
+    _lyricProgress = lyricProgress;
+    UIColorLabel *colorLab =  _labelArrM[_currentIndex];
+    colorLab.progress = lyricProgress;
 }
 
 - (void)layoutSubviews {
@@ -116,7 +125,7 @@ static CGFloat const labelHeight = 40.0;
     
 }
 
-- (NSMutableArray<UILabel *> *)labelArrM {
+- (NSMutableArray<UIColorLabel *> *)labelArrM {
     if (_labelArrM == nil) {
         _labelArrM = [[NSMutableArray alloc] init];
     }
