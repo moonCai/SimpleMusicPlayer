@@ -8,6 +8,7 @@
 
 #import "CYMusicManager.h"
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CYMusicManager ()
 //播放器
@@ -25,6 +26,11 @@
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
     });
+    //开启音频会话
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    //开启应用程序的远程控制
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return instance;
 }
 
