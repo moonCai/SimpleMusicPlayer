@@ -13,6 +13,7 @@
 #import "CYMusicManager.h"
 #import "CYLyricParser.h"
 #import "CYLyricModel.h"
+#import "UIColorLabel.h"
 
 @interface ViewController ()
 //模型数据数组
@@ -48,7 +49,7 @@
 //专辑名
 @property (weak, nonatomic) IBOutlet UILabel *albumLabel;
 //歌词
-@property (weak, nonatomic) IBOutlet UILabel *lyricsLabel;
+@property (weak, nonatomic) IBOutlet UIColorLabel *lyricsLabel;
 //歌手名
 @property (weak, nonatomic) IBOutlet UILabel *singerNameLabel;
 
@@ -56,8 +57,7 @@
 //专辑图片
 @property (weak, nonatomic) IBOutlet UIImageView *singerHoriImgView;
 //横向歌词
-@property (weak, nonatomic) IBOutlet UILabel *lyricsHorLabel;
-
+@property (weak, nonatomic) IBOutlet UIColorLabel *lyricsHorLabel;
 
 @end
 
@@ -120,7 +120,7 @@
     self.currentTimeLabel.text = [self timeStrWithTimeInterval:[CYMusicManager sharedManager].currentTime];
     
     //歌手图片旋转
-    self.singerImgView.transform = CGAffineTransformRotate(self.singerImgView.transform, M_PI_4 / 60);
+    self.singerImgView.transform = CGAffineTransformRotate(self.singerImgView.transform, M_PI_4 / 240);
     
     //进度条
     self.progressSlider.value = [CYMusicManager sharedManager].currentTime / [CYMusicManager sharedManager].duration;
@@ -159,6 +159,11 @@
     }
     self.lyricsLabel.text = self.lyricModelArr[self.currentLyricIndex].lyricContent;
     self.lyricsHorLabel.text = self.lyricModelArr[self.currentLyricIndex].lyricContent;
+    //设置歌词变色进度( (当前播放时间 - 当前句起始时间)/(下一句起始时间 - 当前句起始时间))
+    CGFloat progress = ([CYMusicManager sharedManager].currentTime - currentLyricModel.initialTime) / (nextLyricModel.initialTime - currentLyricModel.initialTime);
+    self.lyricsLabel.progress = progress;
+    self.lyricsHorLabel.progress = progress;
+
 }
 
 #pragma mark 滑动播放进度条,实现手动改变进度
