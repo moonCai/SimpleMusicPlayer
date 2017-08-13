@@ -14,8 +14,9 @@
 #import "CYLyricParser.h"
 #import "CYLyricModel.h"
 #import "UIColorLabel.h"
+#import "UILyricView.h"
 
-@interface ViewController ()
+@interface ViewController () <UILyricViewDelegate>
 //模型数据数组
 @property (nonatomic,strong) NSArray<CYMusicModel *> *modelArray;
 //当前曲目索引
@@ -52,6 +53,10 @@
 @property (weak, nonatomic) IBOutlet UIColorLabel *lyricsLabel;
 //歌手名
 @property (weak, nonatomic) IBOutlet UILabel *singerNameLabel;
+//歌词容器视图
+@property (weak, nonatomic) IBOutlet UILyricView *lyricView;
+//中心视图
+@property (weak, nonatomic) IBOutlet UIView *verCenterView;
 
 #pragma mark 横屏视图
 //专辑图片
@@ -74,12 +79,16 @@
     //根据数据 刷新UI
     [self setUpData];
 
-    
+    self.lyricView.delegate = self;
+}
+
+#pragma mark - 代理监听横向视图滚动进度
+- (void)lyricView:(UILyricView *)lyricView andScrollProgress:(CGFloat)progress {
+    self.verCenterView.alpha = 1 - progress;
 }
 
 #pragma mark - 设置数据
--(void)setUpData {
-    
+- (void)setUpData {
     //进度条
     self.progressSlider.value = 0;
     //歌手
@@ -92,6 +101,8 @@
     self.singerHoriImgView.image = [UIImage imageNamed:self.modelArray[self.currentIndex].image];
     //歌词
     self.lyricModelArr = [CYLyricParser parserLyricWithFileName:self.modelArray[self.currentIndex].lrc];
+    
+    self.lyricView.lyricModels = self.lyricModelArr;
     
     //专辑
     self.albumLabel.text = self.modelArray[self.currentIndex].album;

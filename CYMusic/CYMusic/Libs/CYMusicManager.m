@@ -43,13 +43,11 @@
         [self.player prepareToPlay];
     }
     
-    
-//    // 延时一秒,给缓冲预留更充足的时间
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    // 延时一秒,给缓冲预留更充足的时间
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //开始播放
         [self.player play];
-//    });
-    
+    });
 
 }
 

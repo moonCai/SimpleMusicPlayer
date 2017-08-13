@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F206AAA1F4032D5006FC2F5 /* UIColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F206AA91F4032D5006FC2F5 /* UIColorLabel.m */; };
+		6F206AAD1F40990B006FC2F5 /* UILyricView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F206AAC1F40990B006FC2F5 /* UILyricView.m */; };
 		6F45186F1EE732A1002F678D /* CYMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F45186E1EE732A1002F678D /* CYMusicManager.m */; };
 		6F69DCC61EE55229000D2394 /* CYMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F69DCC51EE55229000D2394 /* CYMusicModel.m */; };
 		6FA331E11EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA331CC1EE52ED400BDA276 /* 李克勤 - 月半小夜曲.mp3 */; };
@@ -49,6 +50,8 @@
 		488FB72F3AE60FBD59E9A7E7 /* libPods-CYMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F206AA81F4032D5006FC2F5 /* UIColorLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorLabel.h; sourceTree = "<group>"; };
 		6F206AA91F4032D5006FC2F5 /* UIColorLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorLabel.m; sourceTree = "<group>"; };
+		6F206AAB1F40990B006FC2F5 /* UILyricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILyricView.h; sourceTree = "<group>"; };
+		6F206AAC1F40990B006FC2F5 /* UILyricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILyricView.m; sourceTree = "<group>"; };
 		6F45186D1EE732A1002F678D /* CYMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMusicManager.h; sourceTree = "<group>"; };
 		6F45186E1EE732A1002F678D /* CYMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYMusicManager.m; sourceTree = "<group>"; };
 		6F69DCC41EE55229000D2394 /* CYMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYMusicModel.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 		6FC2644F1EE1CB18009E35DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F206AAB1F40990B006FC2F5 /* UILyricView.h */,
+				6F206AAC1F40990B006FC2F5 /* UILyricView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			files = (
 				6F206AAA1F4032D5006FC2F5 /* UIColorLabel.m in Sources */,
 				6FD6637A1F3F6491001C052A /* NSDateFormatter+shared.m in Sources */,
+				6F206AAD1F40990B006FC2F5 /* UILyricView.m in Sources */,
 				6F45186F1EE732A1002F678D /* CYMusicManager.m in Sources */,
 				6FA331FA1EE54A6600BDA276 /* AppDelegate.m in Sources */,
 				6FD663771F3F3A31001C052A /* CYLyricParser.m in Sources */,
