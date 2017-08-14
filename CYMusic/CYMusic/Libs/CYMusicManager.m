@@ -7,12 +7,10 @@
 //
 
 #import "CYMusicManager.h"
-#import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
 @interface CYMusicManager ()
-//播放器
-@property (nonatomic,strong) AVAudioPlayer *player;
+
 //当前曲目名
 @property (nonatomic,copy) NSString *fileName;
 
@@ -26,12 +24,40 @@
     dispatch_once(&onceToken, ^{
         instance = [[self alloc] init];
     });
-    //开启音频会话
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    //开启应用程序的远程控制
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return instance;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        //开启音频会话
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+        //应用开启远程控制后,才会自动切歌,既可以实现后台运行 & 支持线控
+        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        //注册打断通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(interruptHandleAction:) name:AVAudioSessionInterruptionNotification object:nil];
+    }
+   return self;
+}
+
+//打断事件处理
+- (void)interruptHandleAction:(NSNotification *)noti {
+    int type = [noti.userInfo[AVAudioSessionInterruptionTypeKey] intValue];
+    switch (type) {
+        case AVAudioSessionInterruptionTypeBegan:  //被打断
+            [self.player pause];
+            //取消选中状态
+            self.playBtn.selected = NO;
+            break;
+        case AVAudioSessionInterruptionTypeEnded: //结束打断
+            [self.player play];
+            //设置为选中状态
+            self.playBtn.selected = YES;
+        default:
+            break;
+    }
+
 }
 
 //开始播放/继续播放

@@ -15,6 +15,7 @@
 #import "CYLyricModel.h"
 #import "UIColorLabel.h"
 #import "UILyricView.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController () <UILyricViewDelegate>
 //模型数据数组
@@ -112,8 +113,83 @@
     
     //当前曲目索引
     [[CYMusicManager sharedManager] playMusicWithFileName: self.modelArray[self.currentIndex].mp3];
+    [CYMusicManager sharedManager].playBtn = self.playButton;
     //当前曲目时长
     self.totalTimeLabel.text = [self timeStrWithTimeInterval:[CYMusicManager sharedManager].duration];
+    //设置锁屏视图
+    [self setUpLockView];
+}
+
+- (void)setUpLockView {
+    //设置正在播放中心
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    // MPMediaItemPropertyAlbumTitle :专辑名
+    // MPMediaItemPropertyAlbumTrackCount:专辑中曲目数
+    // MPMediaItemPropertyAlbumTrackNumber:当前曲目索引
+    // MPMediaItemPropertyArtist:歌手
+    // MPMediaItemPropertyArtwork:封面图片
+    // MPMediaItemPropertyComposer:作曲人
+    // MPMediaItemPropertyDiscCount:专辑数
+    // MPMediaItemPropertyDiscNumber:专辑编号
+    // MPMediaItemPropertyGenre:类型,流派
+    // MPMediaItemPropertyPersistentID:唯一标识符
+    // MPMediaItemPropertyPlaybackDuration:曲目时长
+    // MPMediaItemPropertyTitle:歌曲名称
+    //MPNowPlayingInfoPropertyElapsedPlaybackTime:当前播放时长
+    
+    //当前播放曲目
+    CYMusicModel *music = self.modelArray[self.currentIndex];
+    //封面图片
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[self drawImageWithArtWorkAndLyric]];
+    NSDictionary *dict = @{MPNowPlayingInfoPropertyElapsedPlaybackTime:
+                               @([CYMusicManager sharedManager].currentTime),MPMediaItemPropertyPlaybackDuration:@([CYMusicManager sharedManager].duration),MPMediaItemPropertyTitle:music.name,MPMediaItemPropertyAlbumTitle:music.album,MPMediaItemPropertyArtwork:artWork};
+    center.nowPlayingInfo = dict;
+}
+
+#pragma mark - 绘制封面和歌词
+- (UIImage *)drawImageWithArtWorkAndLyric {
+    //获取当前歌曲
+    CYMusicModel *music = self.modelArray[self.currentIndex];
+    //当前句歌词
+    CYLyricModel *lyric = self.lyricModelArr[self.currentLyricIndex];
+    //获取屏幕较短的长度(考虑横竖屏锁屏)
+    CGFloat minLength = MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    //绘制图片的边长
+    CGFloat imgWH = minLength * 0.6;
+    //当前上下文
+    UIGraphicsBeginImageContext(CGSizeMake(imgWH, imgWH));
+    //将封面图片画进上下文中
+    [[UIImage imageNamed:music.image] drawInRect:CGRectMake(0, 0, imgWH, imgWH)];
+    //设置填充色
+    [[UIColor whiteColor] setFill];
+    //将歌词画入上下文中
+    [lyric.lyricContent drawInRect:CGRectMake(0, imgWH - 40, imgWH, 40)  withFont:[UIFont systemFontOfSize:17] lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
+    //获取图片
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    //关闭上下文
+    UIGraphicsEndImageContext();
+
+    return img;
+}
+
+#pragma mark - 远程控制事件监听
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlPlay: //播放
+        case UIEventSubtypeRemoteControlPause: //暂停
+        case UIEventSubtypeRemoteControlStop: //停止
+            [self playAction:self.playButton];
+            break;
+        case UIEventSubtypeRemoteControlPreviousTrack: //上一曲
+            [self preItemAction:self.preButton];
+            break;
+        case UIEventSubtypeRemoteControlNextTrack: //下一曲
+            [self nextAction:self.nextButton];
+            break;
+        default:
+            break;
+    }
+
 }
 
 #pragma mark 将NSTimeInterval转化为字符串

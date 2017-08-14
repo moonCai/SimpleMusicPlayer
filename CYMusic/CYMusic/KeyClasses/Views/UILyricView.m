@@ -66,7 +66,9 @@ static CGFloat const labelHeight = 40.0;
     UIColorLabel *currentLabel = _labelArrM[_currentIndex];
     currentLabel.font = [UIFont systemFontOfSize:22];
     //改变偏移量
-    self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin + currentIndex * labelHeight);
+    [UIView animateWithDuration:0.6 animations:^{
+          self.verScrollView.contentOffset = CGPointMake(0, -kTopMargin + currentIndex * labelHeight);
+    }];
 
 }
 

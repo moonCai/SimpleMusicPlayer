@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CYMusicManager : NSObject
 //当前播放时长
@@ -16,6 +18,11 @@
 
 //全局访问点
 +(instancetype)sharedManager;
+
+//播放器
+@property (nonatomic,strong) AVAudioPlayer *player;
+
+@property (nonatomic,weak) UIButton *playBtn;
 
 //播放或暂停
 -(void)playMusicWithFileName:(NSString *)fileName;
