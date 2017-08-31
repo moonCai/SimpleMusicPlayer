@@ -123,6 +123,17 @@
 - (void)setUpLockView {
     //设置正在播放中心
     MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    //当前播放曲目
+    CYMusicModel *music = self.modelArray[self.currentIndex];
+    //封面图片
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[self drawImageWithArtWorkAndLyric]];
+    NSDictionary *dict = @{MPNowPlayingInfoPropertyElapsedPlaybackTime:@([CYMusicManager sharedManager].currentTime),  //当前播放时长
+                           MPMediaItemPropertyPlaybackDuration:@([CYMusicManager sharedManager].duration),   //当前播放曲目总时长
+                           MPMediaItemPropertyTitle:music.name,  //曲目名
+                           MPMediaItemPropertyAlbumTitle:music.album,  //专辑名
+                           MPMediaItemPropertyArtwork:artWork};  //封面图片
+    center.nowPlayingInfo = dict;
+    
     // MPMediaItemPropertyAlbumTitle :专辑名
     // MPMediaItemPropertyAlbumTrackCount:专辑中曲目数
     // MPMediaItemPropertyAlbumTrackNumber:当前曲目索引
@@ -136,14 +147,6 @@
     // MPMediaItemPropertyPlaybackDuration:曲目时长
     // MPMediaItemPropertyTitle:歌曲名称
     //MPNowPlayingInfoPropertyElapsedPlaybackTime:当前播放时长
-    
-    //当前播放曲目
-    CYMusicModel *music = self.modelArray[self.currentIndex];
-    //封面图片
-    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[self drawImageWithArtWorkAndLyric]];
-    NSDictionary *dict = @{MPNowPlayingInfoPropertyElapsedPlaybackTime:
-                               @([CYMusicManager sharedManager].currentTime),MPMediaItemPropertyPlaybackDuration:@([CYMusicManager sharedManager].duration),MPMediaItemPropertyTitle:music.name,MPMediaItemPropertyAlbumTitle:music.album,MPMediaItemPropertyArtwork:artWork};
-    center.nowPlayingInfo = dict;
 }
 
 #pragma mark - 绘制封面和歌词

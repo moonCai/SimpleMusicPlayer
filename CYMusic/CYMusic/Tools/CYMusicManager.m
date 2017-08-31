@@ -41,7 +41,7 @@
    return self;
 }
 
-//打断事件处理
+//播放打断事件处理
 - (void)interruptHandleAction:(NSNotification *)noti {
     int type = [noti.userInfo[AVAudioSessionInterruptionTypeKey] intValue];
     switch (type) {
@@ -57,7 +57,6 @@
         default:
             break;
     }
-
 }
 
 //开始播放/继续播放
